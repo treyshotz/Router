@@ -1,6 +1,12 @@
 # Router
 Router bruteforce project
 
+ATTENTION:
+This program only works on on Router/Servers that use HTTPBasicAuth
+
+Tested on:
+Router: Asus RT-AC66U
+Firmware: 3.0.0.4.376_3861
 
 TO INSTALL:
 ###################
