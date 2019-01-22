@@ -7,16 +7,9 @@ import threading
 #TODO
 #Optimalisere koden med concurrent for raskere jobbing
 #Fikse bug med at den ikke printer rett i den første linjen
-#
 
 print("Welcome to HTTTPBasic auth dictionary attack")
 ipadr = input("Type the ip address: ")
-checkip = requests.get("http://"+ipadr)
-if checkip.status_code == 200:
-    print("Status code 200 recieved. This proabably means your router does not support HTTPBasicAuth.")
-    print("If this is not true, please contact author")
-    time.sleep(3)
-    exit()
 username = input("First: Do you have a username you want to try? ")
 
 start = time.time() #starts the timer
@@ -37,6 +30,3 @@ while line:
 
 end = time.time() #ends the timer 
 print(end - start) #prints the time used to find the password
-
-def exit():
-    print("The program has been terminated")
