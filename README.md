@@ -2,6 +2,7 @@
 Router bruteforce project
 
 ATTENTION:
+ONLY FOR EDUCATIONAL PURPOSES
 This program only works on on Router/Servers that use HTTPBasicAuth
 
 Tested on:
